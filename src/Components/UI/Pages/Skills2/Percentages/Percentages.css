@@ -1,0 +1,158 @@
+.Percentages{
+    width:100%;
+    position:absolute;
+    top:-65px;
+    display:flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.Percentages.Creative{
+    right:-14%;
+}
+
+.Percentages.Logic{
+    left:16%;
+}
+
+.Percentages.Logic.Active,.Percentages.Creative.Active{
+    animation: showpercentages 1.3s 0.5s ease-in forwards;
+}
+
+.Percentages.ActiveFast{
+    animation: showpercentages 1s ease-in forwards;
+}
+
+.Percentages.Nonactive{
+    animation: hidepercentages 1s forwards;
+}
+
+@keyframes showpercentages{
+    0%{}
+    100%{opacity: 1;}
+}
+
+@keyframes hidepercentages{
+    0%{}
+    100%{opacity: 0;}
+}
+
+@media(max-width:350px){
+    .Percentages.Creative{
+        right:15%;
+        top:-20px;
+    }
+
+    .Percentages.Logic{
+        left:23%;
+        top:0;
+    }
+}
+
+@media(min-width:499px){
+    .Percentages{
+        top:-80px;
+    }
+    .Percentages.Logic{
+        left:11%;
+    }
+    .Percentages.Creative{
+        left:7%;
+    }
+  }
+
+  @media(min-width:699px){
+    .Percentages{
+        top:-100px;
+    }
+    .Percentages.Logic{
+        left:5%;
+    }
+  }
+  
+  /* END @media(min-width:499px) */
+  
+  @media(min-width:1024px){
+    .Percentages{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        row-gap: 80px;
+        top:17%;
+    }
+    .Percentages.Logic{
+        left:-74px;
+        top:12%
+    }
+    .Percentages.Creative{
+        grid-template-columns: 100%;
+        row-gap: 40px;
+        left:10%;
+        top:13%;
+    }
+  
+  }
+  
+  @media(min-width:1200px){
+    .Percentages.Creative{
+        grid-template-columns: 40% 40%;
+        row-gap: 80px;
+        left:30%;
+    }
+
+    .SkillTxt{
+        margin-top:10px;
+    }
+   
+}
+
+@media(min-width:1499px){
+    .Percentages{
+        grid-template-columns: 50% 50%;
+        row-gap: 100px;
+
+    }
+
+    .Percentages.Logic{
+        left:-104px;
+    }
+
+    .Percentages.Creative{
+        grid-template-columns: 50% 50%;
+        row-gap: 100px;
+        left:45%;
+    }
+
+    .SkillTxt{
+        margin-top:10px;
+    }
+   
+}
+
+@media(min-width:1699px){
+    .Percentages{
+        grid-template-columns: 40% 40%;
+        row-gap: 100px;
+    }
+
+    .Percentages.Logic{
+        left:-29px;
+        top:12%;
+    }
+
+    .Percentages.Creative{
+        grid-template-columns: 40% 40%;
+        row-gap: 100px;
+        left:15%;
+        top:12%;
+    }
+
+    .SkillTxt{
+        margin-top:10px;
+    }
+   
+}

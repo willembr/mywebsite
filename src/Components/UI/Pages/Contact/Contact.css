@@ -1,0 +1,461 @@
+.Rectangle{
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100vh;
+}
+
+.RectangleContact{
+    width:90vh;
+    height:60vh;
+    fill:rgb(255,255,255);
+    stroke-width: 0;
+    transform:rotate(11deg) translate(-45px,24px);
+}
+.AllParts{
+    width:100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    top:142px;
+    z-index:2;
+
+}
+
+.FormPart{
+    background-color: #fff;
+}
+
+.AllParts > section{
+    flex: 0 0 100%;
+    z-index:3;
+}
+
+.SuperPart{
+    position: absolute;
+    top:-24%;
+    right:3%;
+    z-index:5;
+}
+
+.SuperMe{
+    text-align: right;
+}
+
+.SuperMe > img{
+    width:130px;
+}
+
+.Salutation{
+    position: relative;
+    color:#292929;
+    text-transform: uppercase;
+    font-size: 24px;
+    height:24px;
+    top:0;
+    left:10%;
+}
+
+.Salutation .Circle{
+    fill:rgb(97,156,165);
+    transform: scale(0.75) translate(200px,-25px);
+}
+
+form{
+    width:80%;
+    margin:0 auto 40px;
+    min-height: 45vh;
+}
+
+.FormIsSend{
+    font-size: 30px;
+    color:rgb(97,156,165);
+    margin:20px 0;
+}
+
+.SubmitBtn{
+    width: 100%;
+    padding: 15px;
+    margin:20px 0 0;
+    color:#fff;
+    background-color: #292929;
+    text-transform: uppercase;
+    border:1px solid #292929;
+    border-radius: 6px;
+}
+
+.ContactPart{
+    display: grid;
+    width: 80%;
+    margin:-121px auto 10px;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50px 86px auto;
+    z-index:3;
+}
+
+.Address{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start:2 ;
+}
+
+.Address > ul{
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+    padding: 0 0 0 12px;
+}
+
+.ContactPhone{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start:3 ;
+}
+
+.ContactPhone > p{
+    display:none;
+}
+
+.ContactPhone > a{
+    width:100%;
+    display: block;
+    box-sizing: border-box;
+    padding:5px;
+    background-color:rgb(97,156,165);
+    color:#fff;
+    border: 1px solid rgb(97,156,165);
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    margin:5px auto;
+}
+
+.ContactMail{
+    display:none;
+}
+
+.LinksCv{
+    grid-column-start: 1;
+    grid-row-start:1 ;
+    text-align: left;
+}
+
+.LinksCv > a > img, .LinksInsta > a > img{
+    height:100%;
+}
+
+.LinksInsta{
+    grid-column-start: 2;
+    grid-row-start:1;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.FormPart{
+    background-color: #fff;
+}
+
+@media(min-height:400px){
+    .SubmitBtn{
+        margin:5px 0 0;
+    }
+}
+
+@media(min-height:600px){
+
+    .ContactPart{
+        margin:-110px auto 10px;
+    }
+    .ContactPhone > a{
+        padding:10px;
+    }
+    .Salutation{
+        margin:10px 0;
+    }
+}
+
+@media(min-height:800px)
+{
+    .RectangleContact{
+        height:85vh;
+    }
+    .ContactPart{
+        margin:-70px auto 10px;
+    }
+    .ContactPhone > a{
+        padding:15px;
+        margin:10px auto;
+    }
+    .SuperPart {
+        top: -21%;
+    }
+}
+
+
+
+@media(min-width:499px){
+   .AllParts{
+       top:80px;
+   } 
+    .SuperPart {
+        top: -2%;
+        right:5%;
+    }
+    .Salutation{
+        height:unset;
+    }
+    .ContactPart {
+        width: 60%;
+        margin: 50px 0 50px 8%;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows:90px 20px auto;
+    }
+    .Address{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:1 ;
+        text-align: center;
+    }
+    .ContactPhone{
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start:2 ;
+        text-align: center;
+    }
+    .ContactMail{
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start:3 ;
+        text-align: center;
+    }
+    .ContactPhone > a{
+        padding:15px;
+        margin:unset;
+    }
+    .LinksCv{
+        grid-column-start: 1;
+        grid-row-start:1 ;
+        text-align: center;
+    }
+    .LinksCv > a > img, .LinksInsta > a > img{
+        height:85%;
+        margin-top:5px;
+    }
+    .LinksInsta{
+        text-align: center;
+        grid-column-start: 3;
+        margin-left: unset;
+    }
+    .RectangleContact{
+        width:100vh;
+    }
+
+    .ContactPhone > p{
+        display:block;
+    }
+    .ContactMail{
+        display: block;
+    }
+    
+    .ContactPhone > a{
+        display: none;
+    }
+
+    .SubmitBtn{
+        margin:40px 0 0;
+    }
+
+    .Address > ul {
+        padding: 10px 0 0 0;
+    }
+    
+}
+
+@media(max-height:800px){
+    .SuperPart{
+        top:2%;
+    }
+}
+
+@media(min-width:1024px){
+    .AllParts{
+        height:100vh;
+        flex-direction: row;
+        top:0
+    }
+
+    .SuperPart{
+        position: static;
+        top: -14%;
+    }
+
+    .AllParts > section{
+        flex: 0 0 33%;
+        text-align: center;
+    
+    }
+
+    .Rectangle{
+        width: 120vw;
+        height: 100vh;
+    }
+    
+    .RectangleContact{
+        width:120vw;
+        height:85vh;
+        fill:rgb(255,255,255);
+        stroke-width: 0;
+        transform:rotate(11deg) translate(0,-50px);
+    }
+
+    .SuperMe{
+        text-align: center;
+        position: relative;
+        top:50%;
+        transform: translateY(-70%);
+    }
+
+    .SuperMe > img{
+        width:230px;
+    }
+
+    .FormPart{
+        height:50vh;
+        background-color: transparent;
+        position: relative;
+        top:50%;
+        transform: translateY(-63%);
+        text-align: left !important;
+    }
+
+    .Salutation{
+        position: static;
+        display: inline-block;
+        color:#292929;
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-left:10%;
+    }
+
+    .Salutation > h1{
+        display: inline-block;
+    }
+
+    form{
+        margin:25px auto 25px;
+    }
+
+    .Salutation .Circle{
+        fill:rgb(97,156,165);
+        transform: scale(0.75) translate(1px,12px);
+    }
+
+    .ContactPart{
+        width: 55%;
+        height:40vh;
+        position: relative;
+        top:50%;
+        transform: translateY(15%);
+        grid-template-columns: 25% 12.5% 12.5% 25% 25%;
+        grid-template-rows:4.5em 1em 2.5em 5em;
+        margin: 50px auto 30px;
+    }
+
+    .Address{
+        grid-column-start: 2;
+        grid-column-end: span 3;
+        grid-row-start:1 ;
+        text-align: left;
+    }
+    .Address > ul{
+        padding: 0 0 0 0;
+        text-align: left;
+    }
+    .ContactPhone{
+        grid-column-start: 2;
+        grid-column-end: span 3;
+        text-align: left;
+    }
+    .ContactPhone > a{
+        display: none;
+    }
+
+    .ContactPhone > p{
+        display: inline-block;
+    }
+
+    .ContactMail{
+        display: inline-block;
+        grid-column-start: 2;
+        grid-column-end: span 3;
+        grid-row-start: 3;
+        text-align: left;
+    }
+
+    .LinksCv{
+        grid-column-start: 2;
+        grid-row-start: 4;
+        text-align: left;
+    }
+
+    .LinksCv > a > img, .LinksInsta > a > img{
+        height:50%;
+        margin-top: 0;
+    }
+
+    .LinksInsta{
+        grid-column-start: 3;
+        grid-row-start: 4;
+        text-align: left;
+    }
+
+    .SubmitBtn{
+        margin:30px 0 0;
+    }
+
+}
+
+@media(min-width:1200px){
+    .ContactPart{
+        width: 80%;
+        transform: translateY(-10%);
+    }
+}
+
+@media(min-width:1400px){
+    .RectangleContact{
+        height:70vh;
+        transform:rotate(11deg) translate(0,-38px);
+    }
+    .SuperMe {
+        transform: translateY(-98%);
+    }
+    .ContactPart{
+        transform: translateY(-7%);
+    }
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */
+
+@media(min-width:1700px){
+    .RectangleContact {
+        height: 65vh;
+        transform: rotate(11deg) translate(0,7px);
+    }
+    .SuperMe {
+        transform: translateY(-90%);
+    }
+    .SuperMe > img {
+        width: 280px;
+    }
+    .FormPart {
+        transform: translateY(-45%);
+    }
+    .ContactPart{
+        transform: translateY(5%);
+        grid-template-columns: 37.5% 12.5% 12.5% 37.5%;
+    }
+
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */

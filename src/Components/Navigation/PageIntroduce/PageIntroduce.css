@@ -1,0 +1,199 @@
+.PageIntroduce{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100px;
+    z-index:1000;
+    text-align: center;
+}
+
+.HoldTheLine{
+    display: none;
+}
+
+.BouncePage{
+    position: absolute;
+    display: block;
+    top:50px;
+    right:-50%;
+    margin: 0 auto;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    opacity: 1;
+}
+
+.BouncePage.Active{
+    animation: hitTheRoad 0.5s 0.5s ease-out forwards;
+}
+
+.SlowActive{
+    animation: hitTheRoadSlow 0.5s 2.5s ease-out forwards;
+}
+
+.FurtherActive{
+    top:61px;
+    animation: hitTheRoadFurther 0.5s 0.5s ease-out forwards;
+}
+
+.Further{
+    opacity: 1;
+    transform: translateX(-146px);
+    animation: further 1s 1s ease-out forwards;
+}
+
+.BouncePage.Back{
+    opacity: 1;
+    transform: translateX(-179px);
+    animation: back 1s 1s ease-out forwards;
+}
+
+
+@keyframes hitTheRoad {
+    0%   { opacity: 0;}
+    100% {  right:25%;opacity: 1;}
+}
+
+@keyframes hitTheRoadSlow {
+    0%   { opacity: 0;}
+    100% { right:25%;opacity: 1;}
+}
+
+@keyframes hitTheRoadFurther {
+    0%   { opacity: 0;}
+    100% { left:9px;right:0;opacity: 1}
+}
+
+@keyframes further{
+    0%   {}
+    100% { transform: translateX(-179px)}
+}
+
+@keyframes back{
+    0%   {}
+    100% { transform: translateX(-146px)}
+}
+
+@media(max-width:350px){
+    .FurtherActive{
+        top:25px;
+    }
+}
+
+
+@media(min-width:499px){
+    @keyframes hitTheRoadSlow {
+        0%   { opacity: 0;}
+        100% { right:16%;opacity: 1;}
+    }
+    @keyframes hitTheRoad {
+        0%   { opacity: 0;}
+        100% { right:16%;opacity: 1;}
+    }
+}
+
+
+
+@media(min-width:1024px){
+    
+    .HoldTheLine{
+        display: block;
+        position: absolute;
+        opacity: 0;
+        right:162px;
+        top:0;
+        transform: translateY(-50%);
+    }
+    
+    .HoldTheLine.Active{
+        animation: giveMeAWhiteLine 0.5s ease forwards;
+    }
+
+    .SlowActive{
+        animation: hitTheRoadSlow 0.5s ease-out forwards;
+    }
+    
+    @keyframes giveMeAWhiteLine{
+        0%{}
+        50%{}
+        100%{transform: translateY(50%); opacity: 1;}
+    }
+    
+    .BouncePage{
+        position: absolute;
+        width:150px;
+        text-align: center;
+        top:37%;
+        right:29px;
+        text-transform: uppercase;
+        font-size: 24px;
+        opacity: 0;
+        transform:translateX(200px);
+    }
+
+    .ColorWhite{
+        color:rgb(255,255,255);
+    }
+    
+    .ColorGray{
+        color:rgb(114,115,116);
+    }
+
+    .ColorBlack{
+        color:rgb(50,50,50);
+    }
+
+    .BouncePage.NonActive{
+        transform:translateX(100%);
+    }
+    
+    .BouncePage.Active{
+        transform:translateX(100%);
+        animation: hitTheRoad 0.5s ease-out forwards;
+    }
+
+    .Further{
+        opacity: 1;
+        transform: translateX(-146px);
+        animation: further 0.5s 0.5s ease-out forwards;
+    }
+
+    @keyframes hitTheRoadFurther {
+        0%   { opacity: 0;}
+        100% { transform: translateX(9px);opacity: 1;}
+    }
+
+    @keyframes hitTheRoadSlow {
+        0%   { opacity: 0;}
+        100% { transform: translateX(9px);opacity: 1;}
+    }
+    
+    
+    @keyframes hitTheRoad {
+        0%   { transform: translateX(100px);opacity: 0;}
+        100% { transform: translateX(9px);opacity: 1;}
+    }
+}
+
+@media(min-width:1399px){
+    .HoldTheLine{
+        right:212px;
+    }
+
+    @keyframes hitTheRoadFurther {
+        0%   { opacity: 0;}
+        100% { transform: translateX(-18px);opacity: 1;}
+    }
+
+    @keyframes hitTheRoadSlow {
+        0%   { opacity: 0;}
+        100% { transform: translateX(-18px);opacity: 1;}
+    }
+    
+    
+    @keyframes hitTheRoad {
+        0%   { transform: translateX(100px);opacity: 0;}
+        100% { transform: translateX(-18px);opacity: 1;}
+    }
+}

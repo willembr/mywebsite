@@ -1,0 +1,83 @@
+.BrainPartIMG{
+    position: relative;
+    width:90%;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.BrainPartIMG.NonActive{
+animation: hideMostly 0.5s ease forwards;
+}
+
+.BrainPartIMG.Active{
+opacity: 0.1;
+animation: showBrain 0.5s ease forwards;
+}
+
+@keyframes hideMostly{
+0%{}
+100%{opacity: 0.1;}
+}
+
+@keyframes showBrain{
+0%{}
+100%{opacity: 1;}
+}
+
+.BrainPart{
+flex:0 0 50%;
+position: relative;
+}
+.LeftSide{
+    text-align: right;
+}
+
+.RightSide{
+    text-align: left;
+}
+
+@media(max-width:350px){
+.BrainPartIMG{
+    width:70%;
+    top:70%;
+}
+}
+
+@media(min-width:400px){
+.BrainPartIMG{
+    width: 80%;
+}
+}
+
+@media(min-width:499px){
+.BrainPartIMG{
+    width:66%;   
+}
+}
+
+@media(min-width:699px){
+.BrainPartIMG{
+    width:90%;   
+}
+}
+
+/* END @media(min-width:499px) */
+
+@media(min-width:1024px){
+.BrainPart{
+ position: relative;
+}
+
+.BrainPartIMG{
+ width:45% ;
+}
+
+}
+
+@media(min-width:1700px){
+.BrainPartIMG{
+   width:28%;   
+}
+
+}
+

@@ -1,0 +1,23 @@
+.UnderConstruction{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 45%;
+}
+.st0{fill:#2D2C2C;}
+	.st1{fill:#FCFAFA;}
+	.st2{font-family:'MyriadPro-Regular';}
+	.st3{font-size:35.5804px;}
+    .st4{fill:#F9F7F7;}
+
+@media screen and (min-width:499px){
+        .UnderConstruction{
+            display: none;
+            width:13%;
+            top:189px;
+            left:0;
+            bottom:0;
+            right:0;
+            margin:auto;
+        }
+    }

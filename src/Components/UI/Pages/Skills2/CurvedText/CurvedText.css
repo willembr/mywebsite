@@ -1,0 +1,185 @@
+.CurvedText{
+    position: relative;
+    width: 100%;
+}
+
+
+.CurvedText.Logic{
+    transform: scale(0.62);
+    top:-102px;
+    opacity: 0;
+}
+.CurvedText.Creative{
+    transform: scale(0.62);
+    top:-200px;
+    left:-6%;
+    opacity: 0;
+}
+
+.CurvedText.Full{
+    transform: scale(0.51);
+    top:-22px;
+    opacity:1;
+}
+
+.Full.NonActive{
+    animation: hidden_curved_txt 1s ease forwards;
+}
+
+.Logic.Active{
+    animation: show_curved_txt 3s 2s ease forwards;
+}
+.Creative.Active{
+    animation: show_curved_txt 3s 2s ease forwards;
+}
+
+@keyframes hidden_curved_txt {
+    0%{}
+    100%{opacity: 0;}
+}
+
+@keyframes show_curved_txt {
+    0%{}
+    100%{opacity: 1;}
+}
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+
+    .CurvedText.Full{ 
+        transform: scale(0.50);
+        top:-70px;
+        opacity:1;
+    }
+
+    .CurvedText.Logic{
+        transform: scale(0.50);
+        top:-230px;
+        opacity: 0;
+    }
+    .CurvedText.Creative{
+        transform: scale(0.50);
+        top:-379px;
+        left:-6%;
+        opacity: 0;
+    }
+}}
+
+@media(max-width:350px){
+    .CurvedText.Logic{
+        transform: scale(0.42);
+        top: -175px;
+    }
+    .CurvedText.Creative{
+        transform: scale(0.42);
+        top: -335px;
+        left: -3%;
+    }
+    
+    .CurvedText.Full{
+        transform: scale(0.4);
+        top:-23px;
+    }
+}
+
+
+@media(min-width:499px){
+    .CurvedText.Logic{
+        transform: scale(0.42);
+        top: -160px;
+    }
+    .CurvedText.Creative{
+        transform: scale(0.42);
+        top: -316px;
+        left: -3%;
+    }
+    
+    .CurvedText.Full{
+        transform: scale(0.4);
+        top:-33px;
+    }
+}
+
+@media(min-width:699px){
+
+    .CurvedText.Logic{ transform: scale(0.55); }
+    .CurvedText.Creative{ transform: scale(0.55); }
+    .CurvedText.Full{ transform: scale(0.55); }
+
+    @media not all and (min-resolution:.001dpcm)
+        { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+                .CurvedText.Full{ top:-66px; }
+                .CurvedText.Logic{ top:-230px; }
+                .CurvedText.Creative{ top:-389px; } 
+            }}
+
+}
+
+/* END @media(min-width:499px) */
+
+
+@media(min-width:1024px){
+    .CurvedText.Logic{
+        top: -225px;
+        left:-1%;
+        transform: scale(0.28);
+    }
+    .CurvedText.Creative{
+        transform: scale(0.28) rotate(-8deg);
+        top: -436px;
+        left: -1%;
+    }
+    
+    .CurvedText.Full{
+        top:-55px;
+        transform: scale(0.28);
+    }
+
+    .Full.NonActive{ animation: hidden_curved_txt 0.5s ease forwards; }
+    .Logic.Active{ animation: show_curved_txt 1s 0.5s ease forwards; }
+    .Creative.Active{ animation: show_curved_txt 1s 0.5s ease forwards; }
+
+    @media not all and (min-resolution:.001dpcm)
+        { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+
+            .CurvedText.Logic{
+                transform: scale(0.4);
+                top: -228px;
+                left:-1%;
+            }
+            .CurvedText.Creative{
+                transform: scale(0.4);
+                top: -386px;
+                left: -1%;
+
+            }
+            
+            .CurvedText.Full{
+                top:-65px;
+            }
+    }}
+
+   }
+
+   /* END @media(min-width:1025px) */
+
+@media(min-width:1699px){
+
+    .CurvedText.Logic{
+        transform:scale(0.17) rotate(-8deg);
+        top:-382px;
+    }
+
+    .CurvedText.Creative{
+        transform:scale(0.17) rotate(-8deg);
+        top: -743px;
+    }
+
+    .CurvedText.Full{
+        transform:scale(0.17);
+        top:-98px;
+    }
+    
+}
+
+   /* END @media(min-width:1025px) */

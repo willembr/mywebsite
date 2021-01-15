@@ -1,0 +1,176 @@
+
+
+.CreationImg{
+    width:90%;
+    margin:20px auto 10px;
+    display:block;
+}
+
+.CloseBtn{
+    position: absolute;
+    right: 10%;
+    text-transform: uppercase;
+    color: #aaa;
+    background-color: #fff;
+    border: none;
+    font-size: 14px;   
+    cursor: pointer; 
+    outline:none;
+}
+
+.CreationSummary .Vector{
+    width:100px;
+    display: block;
+    margin:30px auto;
+}
+
+.CreationSummary  > h1 {
+    width: 100%;
+    text-align: center;
+    font-size:17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+
+.carousel{
+    box-sizing: border-box;
+}
+
+.CreationSummary  > p {
+    width:95%;
+    text-align: left;
+    margin:20px auto;
+    font-size: 16px;
+    color:#6e6e72;
+}
+
+.ImgExplanation{
+    display: inline-block;
+    margin:10px auto;
+    width: 100%;
+    text-align: center;
+    height:40px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.CreationCircles {
+    height:20px;
+    margin: 0 auto;
+    display: block;
+}
+
+.KeyWords{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom:20px;
+    justify-content: center;
+}
+
+.KeyWords > p {
+    display: inline;
+    border : 1px solid #ccc;
+    border-radius:8px;
+    padding:5px 10px;
+    margin:5px 10px;
+
+}
+
+.TechTitle {
+    width:100%;
+    text-align: center;
+    margin: 5px 0 15px;
+    font-weight: bold;
+}
+
+.CreationSummary .CloseLastBtn{
+    width: 100%;
+    padding: 15px;
+    margin:0 0 20px;
+    color:#fff;
+    background-color: #292929;
+    text-transform: uppercase;
+    border:1px solid #292929;
+    border-radius: 6px;
+}
+
+.NextBtn, .PreviousBtn{
+    display:none;
+    width: 70px;
+    border:0;
+    background: transparent;
+    outline: none;
+}
+
+@media(min-width:599px){
+    .CreationImg{
+        width:65%;
+    }
+}
+
+@media(min-width:1024px){
+    .CreationImg{
+        width:50%;
+    }
+
+    .CreationSummary > h1 {
+        margin-top: 30px;
+    }
+
+    .NextBtn{
+        display: block;
+        position: absolute;
+        right:20%;
+        top:42%;
+    }
+    .PreviousBtn{
+        display: block;
+        position: absolute;
+        left: 20%;
+        top:42%;
+    }
+
+    .PreviousBtn > img, .NextBtn > img {
+        width:100%;
+    }
+
+    .CreationSummary > p {
+        font-size: 17px;
+        margin:30px auto;
+        text-align: center;
+    }
+
+    .TechTitle{
+        font-size:21px;
+    }
+
+    .CreationSummary .CloseLastBtn{
+        width:35%;
+        padding:6px 15px;
+        margin:0 auto 20px;
+        display: block;
+    }
+}
+
+@media(min-width:1299px){
+    .CreationSummary .Vector {
+        position: absolute;
+        left:5%;
+        top:0%;
+    }
+
+    .CreationSummary > h1 {
+        font-size: 22px;
+        margin: 70px 0 50px;
+    }
+
+    .NextBtn{
+        right:23%;
+        top:40%;
+    }
+    .PreviousBtn{
+        left: 23%;
+        top:40%;
+    }
+}

@@ -1,0 +1,40 @@
+.PasNextBtn, .PasPreviousBtn{
+    display:none;
+}
+
+.PasNextBtn img, .PasPreviousBtn img{
+    width: 100%;
+}
+
+@media(min-width:1024px){
+    .PasNextBtn, .PasPreviousBtn{
+        position: absolute;
+        display:block;
+        width:50px;
+        border:0;
+        background: transparent;
+        color:transparent;
+        outline: none;
+    }
+
+    .PasNextBtn{
+        right: 28%;
+        top: 42%;   
+    }
+    
+    .PasPreviousBtn{
+        left: 25%;
+        top: 42%;
+    }
+    
+}
+
+@media(min-width:1200px){
+    .PasNextBtn{
+        right: 32%; 
+    }
+    
+    .PasPreviousBtn{
+        left: 29%;
+    }
+}

@@ -1,0 +1,21 @@
+.Creations{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:90%;
+    margin:50px auto;
+}
+
+@media(min-width:499px){
+    .Creations{
+        width: 70%;
+    }
+}
+
+@media(min-width:1025px){
+    .Creations{
+        width:80%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

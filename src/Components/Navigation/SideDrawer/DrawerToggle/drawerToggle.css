@@ -1,0 +1,114 @@
+.DrawerToggle{
+    width: 70px;
+    height:70px;
+    position: fixed;
+    top: 30px;
+    right:15px;
+    cursor: pointer;
+    text-align:center;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    z-index: 120;
+    transform:none;
+}
+
+.DrawerToggle.menu-open{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.Bt-menu-trigger{
+    width:30px;
+    height:30px;
+    position: relative;
+    top:25%;
+    display: inline-block;
+    z-index:5;
+}
+
+.Bt-menu-trigger span{
+    position: absolute;
+    display: block;
+    width:90%;
+    background:#fff;
+    height:0.15em;
+    top:50%;
+    left:1px;
+}
+
+.Bt-menu-trigger span:after,
+.Bt-menu-trigger span:before{
+    position: absolute;
+    display:block;
+    left: 0;
+    width:100%;
+    height:100%;
+    background:#fff;
+    content:'';
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.Bt-menu-trigger span:before{
+    -webkit-transform: translateY(-0.5em);
+    transform : translateY(-0.5em);
+}
+
+.Bt-menu-trigger span:after{
+    -webkit-transform: translateY(0.5em);
+    transform: translateY(0.5em);
+}
+
+.Bt-menu-trigger.Bt-menu-open span:before{
+    -webkit-transform: translateY(-0.28em) translateX(0.35em) scaleX(0.6) rotate(20deg) ;
+    transform: translateY(-0.28em) translateX(0.35em) scaleX(0.6) rotate(20deg);
+}
+
+.Bt-menu-trigger.Bt-menu-open span:after{
+    -webkit-transform: translateY(0.24em) translateX(0.35em) scaleX(0.6) rotate(-20deg) ;
+    transform: translateY(0.24em) translateX(0.35em) scaleX(0.6) rotate(-20deg);
+}
+
+.CircleSvg,.CircleSvg2{
+    position: absolute;
+    left:0;
+    z-index:0;
+}
+.CircleSvg2 circle{
+    stroke:#fff;
+    stroke-width:3;
+    stroke-dasharray:260;
+    stroke-dashoffset:260;
+}
+
+.BorderCircleOpen{
+    animation: open 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.BorderCircleClose{
+    animation: close 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open {
+    from { stroke-dashoffset:260; }
+    to { stroke-dashoffset:0; }
+}
+
+@keyframes close {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: 260; }
+}
+
+@media(max-width:330px){
+    .DrawerToggle{
+        top:12px;
+    }
+}
+
+@media (min-width: 799px){
+    .DrawerToggle{
+        display: none;
+    }
+}

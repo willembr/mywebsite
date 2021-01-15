@@ -1,0 +1,23 @@
+.SideDrawer{
+    position: fixed;
+    height:100%;
+    width:50%;
+    background-color:#2e3233;;
+    color:#fff;
+    z-index:110;
+    transition: left 0.8s ease-in-out;
+    overflow:auto;
+}
+.Open{
+    left:0;
+}
+
+.Closed{
+    left:-50%;
+}
+
+@media(min-width:799px){
+    .SideDrawer{
+        display:none;
+    }
+}

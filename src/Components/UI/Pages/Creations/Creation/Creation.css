@@ -1,0 +1,159 @@
+.Creation {
+    width:120%;
+    height:120%;
+    background-color:white;
+    border-radius: 50%;
+    z-index:3;
+}
+
+.CreationDesktopTitle{
+    display:none;
+}
+
+.Creation.Bigger {
+    width:125%;
+    height:125%;
+}
+
+.Creation.Active{
+    border:4px solid #000;
+}
+
+.Creation .Vector {
+    width:60%;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-55%);
+}
+
+.MovingBall{
+    width:30px;
+    height: 30px;
+    background-color: black;
+    border-radius:50%;
+    z-index: 2;
+}
+
+.BigBallGray{
+    width:30px;
+    height: 30px;
+    background-color:#eee;
+    border-radius:50%;
+    z-index: 1;
+}
+
+.ComingSoon{
+    display: inline-block;
+    color:#fff;
+    background-color: #E98E7D;
+    border:1px solid #E98E7D;
+    border-radius: 7px;
+    padding:10px 15px;
+    position: relative;
+    top:30%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+@media(max-width:350px){
+    .ComingSoon{
+        border-radius: 7px;
+        padding:5px 8px;
+        position: relative;
+        top:30%;
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media(min-width:699px){
+
+    .MovingBall{
+        width:32px;
+        height: 32px;
+    }
+
+    .BigBallGray{
+        width:34px;
+        height: 34px;
+    }
+}
+
+@media(min-width:1024px){
+    .MovingBall{
+        width:36px;
+        height: 36px;
+    }
+
+    .BigBallGray{
+        width:36px;
+        height: 36px;
+    }
+
+    .Creation.Bigger {
+        width:140%;
+        height:140%;
+    }
+    .CreationDesktopTitle, .Overlay{
+        height:40px;
+        text-align: center;
+        z-index:2;
+    }
+
+    .CreationDesktopTitle{
+        width: 300px;
+        background-color: #000;
+        display: block;
+    }
+
+    .Overlay{
+        width: 301px;
+        padding:5px 0;
+        position: relative;
+        background-color: #ffe09c;
+    }
+
+    .Overlay.Right{
+        left:1px;
+    }
+
+    .Overlay.Left{
+        right:1px;
+    }
+
+    .no-overlay{
+        animation: no-overlay 2s 2s ease-in forwards;
+    }
+
+    @keyframes no-overlay{
+        0%{}
+        50%{transform:translateX(300px);}
+        100%{transform:scale(0);}
+    }
+
+    .CreationDesktopTitle.Right,.Overlay.Right{
+        margin-left: 400px;
+        border-radius:0 10px 10px 0 ;
+    }
+    .CreationDesktopTitle.Left,.Overlay.Left{
+        margin-right: 400px;
+        border-radius:10px 0 0 10px;
+    }
+
+    .CreationDesktopTitle .Title{
+        width:300px;
+        text-transform:uppercase;
+        color:#fff;
+    }
+
+    .CreationDesktopTitle.Right .Title{
+        margin:10px 0 0 10px;
+    }
+
+    .CreationDesktopTitle.Left .Title{
+        margin:10px 10px 0 0;
+    }
+}
+
+

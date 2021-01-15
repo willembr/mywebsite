@@ -1,0 +1,396 @@
+.FingerPrintBtn{
+    background: rgba(18, 20, 41, 1);
+    background-image: url(../../../assets/images/fingerprint.png);
+    background-size: cover;
+    border-radius: 50%;
+    z-index:19;
+    position: absolute;
+    top:18%;
+    bottom:0;
+    margin: auto;
+    width:60px;
+    height: 60px;
+    transform: scale(1);
+    cursor: pointer;
+ }
+
+ @keyframes pulse-blue {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(18, 20, 41, 0.7);
+    }
+
+    30% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
+    }
+
+    50% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0px rgba(52, 172, 224, 0);
+    }
+}
+/* vanaf hier */
+
+ .Navigation{
+    display: flex;
+    position: absolute;
+    top: 26px;
+    z-index:1005;
+ }
+
+ .Navigation.NonActive{
+     left:-50vh;
+ }
+
+ .Navigation.Active{
+    left: -50vh;
+    animation: showNavigation 1s 0.8s ease-in forwards;
+}
+
+@keyframes showNavigation{
+    0%{}
+    100%{left:20px}
+}
+
+ .NavigationText{
+     color:#fff;
+     margin:0px 10px;
+     text-transform: uppercase;
+     opacity: 1;
+     font-size: 22px;
+ }
+
+  .NavigationText.Show {
+    opacity: 0;
+    animation: showMe 1s 1.6s ease-in forwards;
+ }
+
+ .NavigationText.ShowAfter {
+    opacity: 0;
+    animation: showMe 1s 2.3s ease-in forwards;
+ }
+
+ .NavigationText.Logic{
+     margin-left:42px;
+ }
+
+ @keyframes showMe {
+     0%{}
+     100%{opacity: 1;}
+ }
+
+ @keyframes dontShowMe {
+    0%{}
+    100%{opacity: 0;}
+ }
+
+
+.Navigation.ActiveAfter{
+    left:20px;
+    animation: 
+    goandhide 1s 0.5s ease-in forwards,
+    comeback 1s 1.5s ease-in forwards;
+}
+
+@keyframes goandhide{
+    0%{}
+    50%{left:30px}
+    100%{left:-50vh}
+}
+
+@keyframes comeback{
+    0%{}
+    100%{left:20px}
+}
+
+ .FingerPrintBtnNav {
+    background-image: url(../../../assets/images/fingerprint.png);
+    background-size: cover;
+    border-radius: 50%;
+    z-index:19;
+    position: relative;
+    top:0;
+    margin: auto;
+    width:50px;
+    height: 50px;
+ } 
+
+/* tot hier */
+
+ .FingerPrintBtn.Left{
+     left:48%;
+     animation: pulse-blue 3s infinite;
+ }
+
+ .FingerPrintBtn.Right{
+    right:48%;
+    animation: pulse-blue 3s 1s infinite;
+}
+
+/* VANAF HIER */
+
+.Disappear{
+    opacity: 0;
+}
+
+.FingerPrintBtn.NavLeft{
+    animation: move_left 1s 0.3s ease-in forwards;
+ }
+
+ .FingerPrintBtn.NavRight{
+    animation: move_right 0.5s 0.3s ease-in forwards;
+ }
+
+ @keyframes move_right{
+     0%{}
+     100%{right:-100%;}
+ }
+
+ @keyframes move_left{
+     0%{}
+     100%{left:-100vh;}
+ }
+
+
+ .Toggle{
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align:center;
+ }
+
+
+ .ArrowImg{
+    width: 51px;
+    position: absolute;
+    top: 48px;
+    left: 50px;
+    transform: rotate(-2deg);
+    opacity: 0;
+ }
+
+ .ArrowImg.Show {
+    opacity: 0;
+    animation: showLight 1s 2.2s ease-in forwards;
+ }
+
+ .ArrowImg.ShowAfter {
+    opacity: 0;
+    animation: showLight 1s 2.6s ease-in forwards;
+ }
+
+ @keyframes showLight {
+    0%{opacity: 0;}
+    100%{opacity: 0.3;}
+}
+
+ /* tot hier */
+
+ @media(max-width:350px){
+     .Navigation{
+         top:0;
+     }
+
+     .NavigationText{
+         font-size:14px;
+     }
+     .FingerPrintBtn{
+        top:55%;
+     }
+
+    .FingerPrintBtn.LeftShow{
+        left:59%;
+    }
+   
+    .FingerPrintBtn.RightShow{
+       right:59%;
+   }
+   @keyframes comeback{
+    0%{}
+    100%{left:45px}
+    }
+    @keyframes showNavigation{
+    0%{}
+    100%{left:45px}
+    }
+
+    .Navigation.ActiveAfter{
+        left:45px;
+    }
+ }
+
+ @media(min-width:499px){
+
+    .FingerPrintBtn{
+        top:18%;
+     }
+
+    .FingerPrintBtn.LeftShow{
+        left:57%;
+    }
+   
+    .FingerPrintBtn.RightShow{
+       right:57%;
+   }
+
+   @keyframes comeback{
+        0%{}
+        100%{left:111px}
+    }
+    @keyframes showNavigation{
+        0%{}
+        100%{left:111px}
+    }
+
+    .Navigation.ActiveAfter{
+    left:111px;
+    }
+
+}
+
+@media(min-width:699px){
+
+    .FingerPrintBtn{
+        top:18%;
+        transform: scale(1.4);
+     }
+
+    .FingerPrintBtn.LeftShow{
+        left:52%;
+    }
+   
+    .FingerPrintBtn.RightShow{
+       right:52%;
+   }
+
+   @keyframes comeback{
+    0%{}
+    100%{left:111px}
+    }
+
+    .FingerPrintBtnNav{
+        transform: scale(1.4);
+     }
+
+    .Navigation.ActiveAfter{
+    left:111px;
+    }
+
+    .ArrowImg{
+        top: 60px;
+     }
+
+}
+
+/* END @media(min-width:499px) */
+
+
+@media(min-width:1024px){
+
+    .FingerPrintBtn{
+        top:65px;
+        opacity: 0;
+        transform: scale(1);
+     }
+
+    .FingerPrintBtn.Left{
+        left:50%;
+    }
+   
+    .FingerPrintBtn.Right{
+        right:50%;
+   }
+
+   .FingerPrintBtn.LeftShow{
+        opacity: 1;
+        left:74%;
+    }
+
+    .FingerPrintBtn.RightShow{
+        opacity: 1;
+        right:74%;
+    }
+
+   .Navigation.Active{
+        display:none;
+    }
+
+    .Navigation{
+        display: none;
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin: auto;
+     }
+
+     .NavigationText{
+        display:none;
+    }
+
+    .Disappear{
+        opacity: 0;
+        z-index:-5;
+    }
+    
+    .FingerPrintBtn.NavLeft{
+        animation: 
+        dontShowMe 0.5s ease-in forwards,
+        move_right 1s 0.5s ease-in forwards,
+        showMe 1s 1.5s ease-in forwards;
+     }
+
+    .FingerPrintBtn.NavRight{
+        animation: 
+        dontShowMe 0.5s ease-in forwards,
+        move_left 1s 0.5s ease-in forwards,
+        showMe 1s 1.5s ease-in forwards;
+     }
+    
+     @keyframes move_right{
+         0%{}
+         100%{transform:translateX(80px)}
+     }
+    
+     @keyframes move_left{
+         0%{}
+         100%{transform:translateX(-80px)}
+     }
+
+}
+
+/* END @media(min-width:1025px) and (max-width:1399px) */
+
+
+@media(min-width:1400px) and (max-width:1699px){
+
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */
+
+@media(min-width:1699px){
+    .FingerPrintBtn.RightShow {
+        opacity: 1;
+        right: 85%;
+    }
+
+    .FingerPrintBtn.LeftShow {
+        opacity: 1;
+        left: 85%;
+    }
+
+    @keyframes move_right{
+        0%{}
+        100%{transform:translateX(200px)}
+    }
+   
+    @keyframes move_left{
+        0%{}
+        100%{transform:translateX(-200px)}
+    }
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */

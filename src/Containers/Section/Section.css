@@ -1,0 +1,110 @@
+
+.SectionPage{
+    height:auto;
+    position: relative;
+    padding:15px 10px;
+    box-sizing: border-box;
+    height:100vh;
+}
+
+#Home{
+    background-color: #fff;
+    text-align: center;
+    height:100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#Skills{
+    background-color: #131429;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#Contact{
+    background-color: #619CA5;
+    padding:0;
+    overflow: hidden;
+}
+
+.SectionName{
+    color:#fff;
+    text-transform: uppercase;
+    position: fixed;
+    top: 55px;
+    right:50px;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.SectionName.Go{
+    animation: posToAppear 1s ease-out forwards;
+}
+
+@keyframes posToAppear {
+    0%{}
+    100%{
+        right:100px;
+        opacity:1;
+    }
+}
+
+.SectionName.NoGo{
+    animation: posToDisappear 1s 1s ease-out forwards;
+}
+
+@keyframes posToDisappear {
+    0%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.st1{
+    fill:none;
+    stroke:#F9F7F7;
+    stroke-width: 3;
+    stroke-miterlimit:10;
+
+}
+
+
+@media screen and (min-width:499px){
+    #Home{
+        padding:0;
+    }
+}
+
+/* END @media(min-width:499px) */
+
+
+@media(min-width:699px) and (max-width:1024px){
+
+}
+
+/* END @media(min-width:699px) and (max-width:1024px) */
+
+@media(min-width:1025px){
+ 
+#Contact{
+    flex-direction: row;
+}
+#Creations{
+    display: block;
+}
+
+}
+
+/* END @media(min-width:1025px) and (max-width:1399px) */
+
+
+@media(min-width:1400px) and (max-width:1699px){
+
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */
+
+@media(min-width:1700px){
+
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */

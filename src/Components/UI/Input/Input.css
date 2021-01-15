@@ -1,0 +1,42 @@
+
+input[type=text], 
+input[type=tel],
+input[type=email],
+textarea
+{
+    border:none;
+  }
+.Label{
+    width:100%;
+    display: block;
+    text-align: left;
+    color: #292929;
+    margin: 15px 0 7px;
+}
+
+.InputElement{
+    width:100%;
+    color:#646464;
+    box-sizing: border-box;
+    padding:0 10px;
+    font-size:16px;
+    border-bottom: 2px solid #646464 !important;
+}
+
+.InputElement:focus{
+    outline: none;
+    border-bottom: 2px solid #646464 !important;
+}
+
+@media(min-height:600px){
+    .InputElement{
+        padding:2px 10px;
+    }
+}
+
+@media(min-height:800px)
+{
+    .InputElement{
+        padding:5px 10px;
+    }
+}

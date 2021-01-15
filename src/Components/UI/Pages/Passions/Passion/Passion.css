@@ -1,0 +1,203 @@
+.Passion{
+    width: 100%;
+    min-height:80vh;
+    margin-top: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.PassionTitle{
+    color:#fff;
+    text-transform: uppercase;
+    position: absolute;
+    text-align:center;
+    top:70%;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.PassionQuote{
+    color:#fff;
+    width:90%;
+    font-style: italic;
+    position: absolute;
+    text-align:center;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin:auto;
+    top:75%;
+}
+
+.PassionImg{
+    width:75%;
+    position: absolute;
+    top:0;
+    bottom:150px;
+    left:0;
+    right:0;
+    margin: auto;
+
+}
+
+.VectorPassionImg{
+    position: absolute;
+    width:17%;
+    left:10px;
+    top:20px;
+    opacity: 0.2;
+}
+
+.PassionCircle{
+    position: absolute;
+    margin:auto;
+    z-index: -1;
+    top:5%;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.PassionNav{
+    width: 100px;
+    position: absolute;
+    bottom: 5%;
+    height: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;   
+}
+
+.SwipeImg{
+    width:10%;
+    position: absolute;
+    bottom:12%;
+    right:20%;
+}
+
+[data-aos="new-animation"] {
+    opacity: 0;
+    }
+
+.aos-animate{
+    animation: hideSwipe 1.6s 3s ease-out forwards,
+    swipe 1.6s 3s ease-out forwards !important;
+}
+
+@keyframes hideSwipe {
+    0%{}
+    50%{ opacity: 1; }
+    100%{ opacity:0; }
+}
+
+@keyframes swipe{
+    0%{}
+    100%{right:80%}
+}
+
+@media(max-height:899px){
+    .PassionTitle{
+        top:75%;
+    }
+    
+    .PassionQuote{
+        top:80%;
+    }
+    .PassionNav{
+        bottom: 0;
+    }
+
+    @media not all and (min-resolution:.001dpcm)
+        { @supports (-webkit-appearance:none) and (stroke-color:transparent) { 
+
+            .PassionTitle{
+                top:70%;
+            }
+            
+            .PassionQuote{
+                top:75%;
+            }
+            .PassionNav{
+                bottom: 5%;
+            }
+    
+    }}
+}
+
+@media(min-width:499px){
+
+    .PassionImg{
+        width:60%;
+    }
+
+    .PassionCircle{
+        transform: scale(1.4);
+        top:100px;
+    }
+
+    .PassionTitle{
+        top:80%;
+    }
+    
+    .PassionQuote{
+        top:85%;
+    }
+
+    .PassionNav{
+        bottom: 0;
+    }
+
+}
+
+/* END @media(min-width:499px) */
+
+
+@media(min-width:699px) and (max-width:1024px){
+
+}
+
+/* END @media(min-width:699px) and (max-width:1024px) */
+
+@media(min-width:1024px){
+ 
+    .PassionImg{
+        width:33%;   
+    }
+
+    .PassionCircle {
+        top: 10px;
+        transform: scale(1.2);
+    }
+
+    .PassionTitle{
+        top:75%;
+    }
+    
+    .PassionQuote{
+        top:83%;
+    }
+
+    .PassionNav{
+        bottom: 0;
+    }
+
+}
+
+/* END @media(min-width:1025px) and (max-width:1399px) */
+
+
+@media(min-width:1200px){
+    .PassionImg{
+        width:22%;   
+    }
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */
+
+@media(min-width:1700px){
+
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */

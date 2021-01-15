@@ -1,0 +1,15 @@
+.NavigationItem{
+    color:#fff;
+}
+
+.NavigationItem{
+    padding:16px;
+    border-bottom: 1px solid #3a3f40;
+    transition: all 0.8s ease-in-out;
+}
+
+.NavigationItem span{
+    text-transform:uppercase;
+}
+
+

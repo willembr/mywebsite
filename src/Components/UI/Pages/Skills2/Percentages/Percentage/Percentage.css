@@ -1,0 +1,168 @@
+.Percentage{
+  margin:20px 0 0 0;
+}
+
+.circular-chart {
+  display: block;
+  margin: 5px auto;
+  max-width: 100%;
+  max-height: 50px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 11.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 8.8;
+  stroke-linecap: round;
+  animation: progress 1.5s 0.5s ease-out forwards;
+}
+
+.circle.Active{
+  fill: none;
+  stroke-width: 8.8;
+  stroke-linecap: round;
+  animation: progressFast 1.5s 1200ms ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes progressFast {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #fe8400;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3cb1ff;
+}
+
+.circular-chart.red .circle {
+  stroke: #fe4a4b;
+}
+
+.circular-chart.yellow .circle {
+  stroke: #ffdf64;
+}
+
+.circular-chart.green .circle {
+  stroke: #28c174;
+}
+
+.circular-chart.purple .circle {
+  stroke: #a95990;
+}
+
+.PercentageTxt {
+  fill: #fff;
+  font-family: sans-serif;
+  font-size: 0.7em;
+  text-anchor: middle;
+  text-transform: uppercase;
+}
+
+.SkillTxt{
+    color:#fff;
+    display:block;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.SkillTxt.Left{
+  text-align: left;
+  padding-left:7px;
+}
+
+.SkillTxt.Right{
+  width:65%;
+  text-align: right;
+}
+
+@media(max-width:350px){
+  .Percentage {
+    margin:0 0 0 0;
+    transform: scale(0.8);
+  }
+  .SkillTxt{
+    font-size:12px;
+    margin-top:5px;
+  }
+
+  .SkillTxt.Left{
+    padding-left: 5px;
+  }
+  .SkillTxt.Right{
+    width: 60%;
+  }
+}
+
+@media(min-width:499px){
+.Percentage {
+  width:100%;
+  margin: 0px auto 40px;
+  transform: scale(1.2);
+}
+.SkillTxt{
+  font-size:12px;
+  margin-top:10px;
+}
+
+.SkillTxt.Left{
+  padding-left: 49px;
+}
+.SkillTxt.Right{
+  width: 60%;
+}
+}
+
+@media(min-width:699px){
+.Percentage {
+  margin: 0px auto 80px;
+  transform: scale(1.4);
+}
+}
+
+/* END @media(min-width:499px) */
+
+@media(min-width:1024px){
+
+   .circular-chart {
+    margin: 0;
+  }
+  .Percentage {
+    transform: scale(1.2);
+    margin:0;
+  }
+  .Percentage.Creative{
+      transform:scale(1.2);
+    }
+  .Percentage.Logic{
+      transform:scale(1.2);
+    }
+  .SkillTxt{
+      font-size:10px;
+      margin-top:10px;
+    }
+  .SkillTxt.Right {
+      width: 57%;
+  }
+  
+}
+
+@media(min-width:1200px){
+.SkillTxt.Right {
+  width: 65%;
+    }
+}

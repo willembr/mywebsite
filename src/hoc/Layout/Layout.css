@@ -1,0 +1,13 @@
+.Content{
+   width:100%;
+   transition: margin 0.8s ease-in-out;
+}
+
+.Menu-open{
+    margin:0 50%;
+}
+
+.Menu-close{
+    margin:0 0;
+}
+

@@ -1,0 +1,116 @@
+.Creation{
+    width:100%;
+    height:280px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin:0 auto 20px;
+    padding:15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.Vector{
+    width:85px;
+    display:block;
+    margin: 30px auto;
+}
+
+.Creation > h1 {
+    width: 100%;
+    text-align: center;
+    font-size:18px;
+    text-transform: uppercase;
+}
+
+.Creation > p {
+    width:100%;
+    text-align: center;
+    margin:10px auto 40px;
+    font-size: 14px;
+    color:#6e6e72;
+}
+
+.Creation.Active{
+    position: fixed;
+    z-index:101;
+    animation: activeCreationWidth 0.2s ease-out forwards,
+    activeCreationHeight 0.2s ease-out forwards;
+    cursor: none;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.Creation.NonActive{
+    position: initial;
+    top:unset;
+    left:unset;
+}
+
+.Close{
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+
+@keyframes activeCreationWidth{
+0%{}
+100%{
+    width:90%;
+    left:0;
+    right:0;
+    }
+}
+
+@keyframes activeCreationHeight{
+    0%{}
+    100%{
+        height:80vh;
+        top:65px;
+        }
+    }
+
+.CreationImg{
+    width:89%;
+    margin:20px auto 10px;
+}
+
+.ImgExplanation{
+    display: inline-block;
+    margin:10px auto 20px;
+}
+
+
+@media(min-width:1025px){
+    .Creation{
+        width:30%;
+        margin:0 20px 20px 0;
+    }
+    .NewCreation{
+        width:30%;
+        margin:0 20px 20px 0;
+    }
+    .Creation > h1 {
+        font-size: 15px;
+    }
+
+    .Creation.Active{
+        animation: activeCreationWidth 0.1s ease-out forwards,
+        activeCreationHeight 0.1s ease-out forwards;
+    }
+
+    @keyframes activeCreationWidth{
+        0%{}
+        100%{
+            width:80%;
+            left:120px;
+            right:0;
+            }
+        }
+
+    @keyframes activeCreationHeight{
+        0%{}
+        100%{
+            height:80vh;
+            top:65px;
+            }
+        }
+}

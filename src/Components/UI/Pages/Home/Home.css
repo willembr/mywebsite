@@ -1,0 +1,328 @@
+.Home{
+    width:100vw;
+    height:100vh;
+    text-align: center;
+}
+.HomePlayGround{
+display: block;
+width: 100%;
+margin:auto;
+}
+
+.Who{
+position: absolute;
+background: rgb(255,255,255,0.4);
+border: 3px solid rgb(255,255,255,0.4);
+padding:20px 0;
+width:200%;
+bottom:18%;
+left:-32%;
+text-transform: uppercase;
+z-index: 50;
+transform:rotate(-37deg);
+}
+
+.FrontImg{
+position: absolute;
+height: 100vh;
+z-index: 0;
+top: 0;
+left: 0;
+right:0;
+opacity: 1;
+}
+
+.FrontNB{
+display: none;
+}
+
+.WhiteBg{
+width:150%;
+height:80px;
+background-color: #fff;
+position: absolute;
+z-index:-1;
+top:0;
+bottom:0;
+left: -100px;
+right:0;
+margin:auto;
+opacity: 0.6;
+}
+
+.RectangleBottom{
+width:600px;
+height:450px;
+position: absolute;
+bottom:0;
+left:0;
+}
+
+.RectangleBottom > rect{
+width:600px;
+height:500px;
+transform:rotate(-37deg) translate(-309px,320px);
+position: absolute;
+left:0;
+}
+.Who > h1 {
+font-size:20px;
+text-transform: uppercase;
+}
+
+.Home em{
+font-style: normal;
+color:#000;
+}
+
+.Who > h4{
+font-size:12px;
+margin-top:2px;
+text-transform: uppercase;
+}
+
+.Interests{
+display:none;
+}
+
+@media(max-width:350px){
+@media not all and (min-resolution:.001dpcm)
+    { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+            .Who{
+              bottom:28%;
+              right:3%;
+              }
+    }}
+}
+
+@media(max-height:799px)
+{
+.FrontImg{
+    height: 110vh;
+}
+}
+
+@media(min-width:446px){
+.FrontImg{
+    display: none;
+}
+
+.FrontNB{
+    display: initial;
+    object-fit: scale-down;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    max-height: 100%;
+}
+.Who{
+    background: rgb(222,222,222,0.4);
+    border: 3px solid rgb(222,222,222,0.4);
+    bottom:19%;
+    right:-6%;
+}
+
+.Who > h1 {
+    font-size:28px;
+}
+}
+
+
+
+/* @media(min-width:699px){
+.FrontImg{
+    top:-5%;
+}
+
+.RectangleBottom{
+    bottom: -110px;
+    left: 275px;
+}
+.Who{
+    bottom: 16%;
+    right: -8%;
+}
+
+.Who > h1 {
+    font-size:30px;
+}
+
+@media not all and (min-resolution:.001dpcm)
+    { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+
+        .FrontImg{
+            height: 135vh;
+            top:-5%;
+        }
+    
+        .RectangleBottom{
+            bottom: -150px;
+            left: 300px;
+        }
+        .Who{
+            bottom:12%;
+            right: -7%;
+        }
+    
+        .Who > h1 {
+            font-size:30px;
+        }
+}}
+} */
+
+@media(min-width:1024px)
+{
+.HomePlayGround{
+    display: grid;
+    position: absolute;
+    width:600px;
+    height:600px;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 120px 246px auto;
+    top:0%;
+    left:30%;
+    margin:auto;
+    transform: rotate(-53deg);
+}
+
+.Who{
+    width:100%;
+    background: none;
+    border:none;
+    bottom: 45px;
+    left: 0;
+    margin: auto;
+    transform:rotate(0deg);
+}
+
+.Interests{
+    display: block;
+    margin-top:50px;
+    left: 0;
+    transform:rotate(0deg);
+  }
+
+  .Who>h1{
+    font-size: 28px;
+    font-weight: lighter;
+    letter-spacing: 8px;
+    margin-bottom:7px;
+}
+
+.Who>h4{
+    font-weight: lighter;
+    letter-spacing: 5.7px;
+    color: #646464;
+}
+
+.Grid-item{
+    position: relative;
+}
+.FrontImg{
+    display: initial;
+    object-fit: scale-down;
+    width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    top:0;
+    left:0;
+    transform: rotate(90deg) scale(2);
+    animation: comeoutandplay 5s 0.5s ease-out forwards;
+}
+
+@keyframes comeoutandplay{
+  0%{}
+  100%{opacity:0.3;}
+}
+.FrontNB{
+  display: initial;
+  object-fit: scale-down;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  max-height: 100%;
+  transform: rotate(90deg) scale(2);
+}
+
+.Home em{
+color:#528ed2;
+}
+
+  .Interests>h1,
+  .Interests>h2,
+  .Interests>h3,
+  .Interests>h4,
+  .Interests>h5{
+    margin: 0 0 20px 0;
+    font-weight: lighter;
+  }
+
+  .Interests>h1{
+    font-size:22px;
+  }
+  .Interests>h2{
+    font-size:19px;
+  }
+  .Interests>h3{
+    font-size:15px;
+  }
+  .Interests>h4{
+    font-size:12px;
+  }
+  .Interests>h5{
+    font-size:10px;
+  }
+}
+
+@media(min-width:1200px){
+.HomePlayGround{
+    left:35%;
+}
+}
+
+@media(min-width:1400px)
+{
+.HomePlayGround{
+    width:800px;
+    height:800px;
+    grid-template-rows: 120px 325px auto;
+    top:-1%;
+    left:35%;
+}
+
+.Who{
+    bottom: 80px;
+}
+
+.Interests{
+    margin-top:80px;
+  }
+.FrontImg{
+    transform: rotate(90deg) scale(1.8);
+}
+.FrontNB{
+  transform: rotate(90deg) scale(1.8);
+}
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */
+
+@media(min-width:1700px)
+{
+.HomePlayGround{
+    width:1000px;
+    height:1000px;
+    grid-template-rows: 120px 407px auto;
+    top:0;
+}
+
+.Who{
+    bottom: 100px;
+}
+
+.Interests{
+    margin-top:100px;
+  }
+}

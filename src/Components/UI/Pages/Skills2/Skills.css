@@ -1,0 +1,124 @@
+.BrainFull{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:400px;
+    position: relative;
+    top:7%;
+    bottom:0;
+    margin: auto;
+}
+
+.LogicLeftWords{
+    flex:auto;
+    text-align: right;
+}
+
+.CreativeRightWords{
+    display: initial;
+    flex:auto;
+    text-align: left;
+}
+
+.BrainNames{
+    display: none;
+}
+
+
+.SkillsBrain{
+    display: flex;
+    flex: 0 1 310px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.Curved{
+    position: relative;
+    top:51%;
+    transform: translateY(-50%);
+}
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+
+    .BrainFull{
+        top:0;
+    }
+}}
+
+@media(min-width:499px){
+    .BrainNames{
+        top:0;
+    }
+    .SkillsBrain{
+        flex: 0 0 490px;
+    }
+    .BrainFull{
+        top:0;
+    }
+}
+
+/* END @media(min-width:499px) */
+
+
+@media(min-width:1024px){
+
+    .SkillsBrain{
+        flex: 0 0 700px;
+        display: flex;
+    }
+
+    .BrainFull{
+        top:0;
+    }
+    
+    .BrainNames{
+        display: inline-block;
+        position: relative;
+        list-style: none;
+        top:50%;
+        transform: translateY(-50%);
+        opacity: 0.6;
+    }
+
+    .LogicLeftWords .BrainNames{
+        text-align: left;
+    }
+
+    .CreativeRightWords .BrainNames{
+        text-align:right;
+    }
+
+    .BrainNames li{
+        padding:38px 0 38px;
+    }
+
+    .BrainNames h1{
+        color:#fff;
+        text-transform: uppercase;
+    }
+
+    .CreativeRightWords .BrainNames li:nth-child(1) h1{ color:#95ff00}
+    .CreativeRightWords .BrainNames li:nth-child(2) h1{ color:#fe4a4a}
+    .CreativeRightWords .BrainNames li:nth-child(3) h1{ color:#f48003}
+    .CreativeRightWords .BrainNames li:nth-child(4) h1{ color:#3cb1ff}
+    .CreativeRightWords .BrainNames li:nth-child(5) h1{ color:#e9d932}
+
+}
+
+/* END @media(min-width:1025px) and (max-width:1399px) */
+
+
+@media(min-width:1400px) and (max-width:1699px){
+
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */
+
+@media(min-width:1700px){
+    .SkillsBrain{
+        flex: 0 0 1200px;
+    }
+}
+
+/* END @media(min-width:1400px) and (max-width:1699px) */

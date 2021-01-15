@@ -1,0 +1,106 @@
+/* .Slide, .CreationModal{
+    width: 100%;
+    height:280px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin:0 auto 20px;
+    padding:15px;
+    box-sizing: border-box;
+    cursor: pointer;
+} */
+
+.Vector{
+    width:85px;
+    display:block;
+    margin: 30px auto;
+}
+
+.Slide > h1, .CreationModal > h1 {
+    width: 100%;
+    text-align: center;
+    font-size:17px;
+    text-transform: uppercase;
+}
+
+.Slide > p, .CreationModal > p {
+    width:100%;
+    text-align: left;
+    margin:10px auto 20px;
+    font-size: 14px;
+    color:#6e6e72;
+}
+
+.CreationImg{
+    width:100%;
+    margin:20px auto 10px;
+}
+
+.ImgExplanation{
+    display: inline-block;
+    margin:10px auto 20px;
+    width: 100%;
+    text-align: center;
+}
+.CreationCircles {
+    height:20px;
+    margin: 0 auto;
+    display: block;
+}
+
+.KeyWords{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom:20px;
+}
+
+.KeyWords > p {
+    display: inline;
+    border : 1px solid #ccc;
+    border-radius:8px;
+    padding:5px 10px;
+    margin:5px 10px;
+
+}
+
+.TechTitle {
+    width:100%;
+    text-align: center;
+    margin: 5px 0 15px;
+}
+
+.CreationModal > button{
+    width: 100%;
+    padding: 15px;
+    margin:0 0 20px;
+    color:#fff;
+    background-color: #292929;
+    text-transform: uppercase;
+    border:1px solid #292929;
+    border-radius: 6px;
+}
+
+@media(max-width:350px){
+    .Slide > h1 {
+        width: 100%;
+        text-align: center;
+        font-size:15px;
+        text-transform: uppercase;
+    }
+}
+
+@media(min-width:499px){
+    .CreationImg{
+        width:100%;
+        margin:20px auto 10px;
+    }
+}
+
+
+@media(min-width:1024px){
+    .Slide{
+        width:31%;
+        margin: 1%;
+        box-sizing: border-box;
+    }
+}
